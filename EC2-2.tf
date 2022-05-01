@@ -1,17 +1,17 @@
 provider "aws" {
-  region     = "us-east-1"
+  region     = var.region
 }  
 
 resource "aws_instance" "my-web" {
   count = 2
-  ami           = "ami-09d56f8956ab235b3"
-  instance_type = "t2.micro"
-  subnet_id     = "subnet-0527b2ae4674aae33"
-  security_groups = ["sg-0323f191c892ffcf1"]
+  ami           = var.ami
+  instance_type = var.inst-type
+  subnet_id     = var.subnet
+  security_groups = var.sec
   key_name      = aws_key_pair.key.id
 
   tags = {
-    Name = "HelloWorld"
+    Name = "HelloWorld-${count.index+1}"
   }
 }
 
