@@ -20,6 +20,6 @@ variable "subnet"{
 
 variable "sec"{
     type = string
-    default = "sg-0323f191c892ffcf1"
+    default = ["sg-0323f191c892ffcf1"]
 }
 
