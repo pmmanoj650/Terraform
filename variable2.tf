@@ -18,8 +18,8 @@ variable "subnet"{
     default = "subnet-0527b2ae4674aae33"
 }
 
-variable "sec"{
+variable "sec_group"{
     type = string
-    default = ["sg-0323f191c892ffcf1"]
+    default = "sg-0323f191c892ffcf1"
 }
 
