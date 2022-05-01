@@ -21,5 +21,5 @@ resource "aws_key_pair" "key" {
 }
 
 output "instance_ip_addr" {
-  value = aws_instance.my-web[count.index].private_ip
+  value = aws_instance.my-web.public_ip
 }
