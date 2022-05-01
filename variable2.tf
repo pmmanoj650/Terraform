@@ -14,7 +14,7 @@ variable "inst-type"{
 }
 
 variable "subnet"{
-    type = list
+    type = string
     default = ["subnet-0527b2ae4674aae33"]
 }
 
