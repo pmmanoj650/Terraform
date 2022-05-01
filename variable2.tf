@@ -14,8 +14,8 @@ variable "inst-type"{
 }
 
 variable "subnet"{
-    type = string
-    default = "subnet-0527b2ae4674aae33"
+    type = list
+    default = ["subnet-0527b2ae4674aae33" , "subnet-0f713ae42002f7f62"]
 }
 
 variable "sec_group"{
