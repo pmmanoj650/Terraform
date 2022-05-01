@@ -6,7 +6,7 @@ resource "aws_instance" "my-web" {
   count = 2
   ami           = var.ami
   instance_type = var.inst-type
-  subnet_id     = var.subnet
+  subnet_id     = element(var.subnet,count.index)
   security_groups = [var.sec_group]
   key_name      = aws_key_pair.key.id
 
