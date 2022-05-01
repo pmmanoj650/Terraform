@@ -7,7 +7,7 @@ resource "aws_instance" "my-web" {
   ami           = var.ami
   instance_type = var.inst-type
   subnet_id     = var.subnet
-  security_groups = var.sec
+  security_groups = var.sec_group
   key_name      = aws_key_pair.key.id
 
   tags = {
