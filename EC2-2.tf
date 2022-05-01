@@ -3,15 +3,14 @@ provider "aws" {
 }  
 
 resource "aws_instance" "my-web" {
-  count = 2
   ami           = var.ami
   instance_type = var.inst-type
-  subnet_id     = element(var.subnet,count.index)
+  subnet_id     = var.subnet
   security_groups = [var.sec_group]
   key_name      = aws_key_pair.key.id
 
   tags = {
-    Name = "HelloWorld-${count.index+1}"
+    Name = "HelloWorld"
   }
 }
 
