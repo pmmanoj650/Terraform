@@ -4,10 +4,10 @@ provider "aws" {
 
 resource "aws_instance" "my-web" {
   count = 2
-  ami           = "ami-04505e74c0741db8d"
+  ami           = "ami-09d56f8956ab235b3"
   instance_type = "t2.micro"
-  subnet-id     = "subnet-0527b2ae4674aae33"
-  security-groups = ["sg-0323f191c892ffcf1"]
+  subnet_id     = "subnet-0527b2ae4674aae33"
+  security_groups = ["sg-0323f191c892ffcf1"]
   key_name      = aws_key_pair.key.id
 
   tags = {
